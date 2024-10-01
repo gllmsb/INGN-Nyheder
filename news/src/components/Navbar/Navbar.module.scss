@@ -1,0 +1,68 @@
+@use '../../styles/variables' as *;
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    font-family: $font;
+    background-color: $background-color;
+    border-bottom: 1px solid $grayish-white;
+  
+    .navLogo {
+      font-size: 45px;
+      font-weight: bold;
+      color: $primary-color;
+      flex: 1; 
+      text-align: left;
+    }
+  
+    .navLinks {
+      list-style: none;
+      display: flex;
+      gap: 0px; 
+      justify-content: center;
+      flex: 2;
+  
+      li {
+        font-size: 18px;
+        position: relative;
+  
+        &::after {
+          content: '|';
+          margin-left: 10px;
+          margin-right: 10px;
+          color: $text-color;
+        }
+  
+        &:last-child::after {
+          content: '';
+        }
+  
+        a {
+          color: $text-color;
+          text-decoration: none;
+          padding: 5px 0;
+          border-bottom: 2px solid transparent;
+          transition: border-color 0.3s ease;
+  
+          &:hover {
+            border-bottom: 2px solid $hover-color; 
+          }
+        }
+      }
+    }
+  
+    .icons {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: flex-end; 
+      flex: 1; 
+  
+      .icon {
+        font-size: 20px;
+        color: $primary-color; 
+      }
+    }
+  }
