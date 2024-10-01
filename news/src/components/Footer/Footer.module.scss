@@ -1,0 +1,26 @@
+@use '../../styles/variables' as *;
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-family: $font;
+    background-color: $background-color;
+    border-top: 1px solid $grayish-white;
+}
+
+.footerColumn {
+    flex: 1;
+    padding: 0 20px;
+
+    h4 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin: 5px 0;
+        font-size: 14px;
+    }
+}
