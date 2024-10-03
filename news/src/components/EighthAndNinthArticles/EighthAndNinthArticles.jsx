@@ -38,7 +38,7 @@ export const EighthAndNinthArticles = ({ article1, article2, includes }) => {
         <div className={styles.metaInfo}>
           {new Date(article1.fields.dateAndTime).toLocaleDateString()} | {article1.fields.author}
         </div>
-        <div className={styles.readMore} onClick={handleReadMore1}>Læs mere</div>
+        <div className={styles.readMore} onClick={handleReadMore1}>Read more</div>
         {imageUrl1 && <img src={imageUrl1} alt={article1.fields.headline} />}
       </div>
 

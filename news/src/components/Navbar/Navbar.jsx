@@ -13,7 +13,7 @@ export const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navLogo}>
-        INGN
+        <Link to="/">INGN</Link>
       </div>
 
       <ul className={`${styles.navLinks} ${isMenuOpen ? styles.showMenu : ''}`}>

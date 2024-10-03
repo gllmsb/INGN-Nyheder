@@ -15,6 +15,17 @@
     color: $primary-color;
     flex: 1;
     text-align: left;
+
+    a {
+      text-decoration: none;
+      color: $primary-color; 
+      
+      &:visited, 
+      &:hover,
+      &:focus {
+        color: $primary-color;
+      }
+    }
   }
 
   .navLinks {
