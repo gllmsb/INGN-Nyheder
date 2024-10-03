@@ -7,6 +7,7 @@ import { Teknologi } from './pages/Teknologi';
 import { Sport } from './pages/Sport';
 import { Politik } from './pages/Politik';
 import { Samfund } from './pages/Samfund';
+import { ArticleDetail } from './pages/ArticleDetail';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Route path='sport' element={<Sport />}/>
           <Route path='politik' element={<Politik />}/>
           <Route path="samfund" element={<Samfund />} />
+          <Route path="/article/:articleId" element={<ArticleDetail />} />
           </Route>
         </Routes>
       </Router>

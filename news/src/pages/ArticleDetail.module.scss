@@ -1,0 +1,60 @@
+@use '../styles/variables' as *;
+
+.articleDetail {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: $background-color;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: $font;
+  
+    h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: $primary-color;
+    }
+
+    .metaInfo {
+        font-size: 1rem;
+        color: $des-color;
+        margin-bottom: 20px;
+    }
+
+    .articleImage {
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover;
+        object-position: 50% 25%; 
+        margin-bottom: 20px;
+    }
+
+    .articleContent {
+        font-size: 1.2rem;
+        color: $des-color;
+        line-height: 1.6;
+        margin-top: 20px;
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        h2, h3, h4 {
+            color: $primary-color;
+            margin-top: 30px;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+        }
+
+        a {
+            color: $light-gray;
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}

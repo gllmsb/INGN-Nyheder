@@ -1,0 +1,55 @@
+@use '../../styles/variables' as *;
+
+.articleContainer {
+  width: 100%; 
+  background-color: $background-color;
+  font-family: $font;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  box-sizing: border-box; 
+
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 0 10px;
+  }
+
+  .description {
+    font-size: 1.1rem;
+    color: $des-color;
+    margin-bottom: 10px;
+  }
+
+  .metaInfo {
+    font-size: 0.9rem;
+    color: $primary-color;
+    margin-bottom: 10px;
+  }
+
+  .readMore {
+    font-size: 1rem;
+    font-weight: bold;
+    color: $des-color;
+    cursor: pointer;
+    margin-bottom: 15px;
+  }
+
+  img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: 50% 25%;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 15px;  
+    h2 {
+      font-size: 1.5rem;  
+    }
+    img {
+      max-height: 250px; 
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@use '../../styles/variables' as *;
+
+.articlesContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+  
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .articleCard {
+    background-color: $background-color;
+    padding: 15px;
+    font-family: $font;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+    }
+  
+    .metaInfo {
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+      color: $primary-color;
+    }
+  
+    .readMore {
+      font-size: 1rem;
+      color: $des-color;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+  
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: 50% 60%;
+      margin-top: 10px;
+    }
+  }
