@@ -1,4 +1,4 @@
-import React from 'react';
+import { Helmet } from 'react-helmet';
 import styles from './Article1.module.scss';
 import { useNavigate } from 'react-router-dom';
 
@@ -23,6 +23,16 @@ export const Article1 = ({ article, includes }) => {
 
     return (
         <div className={styles.articleContainer}>
+            <Helmet>
+                <title>{article.fields.headline || "No headline available"} | INGN News</title>
+                <meta name="description" content={shortDescription} />
+                <meta property="og:title" content={article.fields.headline || "No headline available"} />
+                <meta property="og:description" content={shortDescription} />
+                <meta property="og:image" content={imageUrl} />
+                <meta property="og:url" content={`https://yourwebsite.com/article/${article.sys.id}`} />
+                <meta name="twitter:card" content="summary_large_image" />
+            </Helmet>
+
             <h2>{article.fields.headline || "No headline available"}</h2>
             <p className={styles.description}>{shortDescription}</p>
             <div className={styles.metaInfo}>
@@ -31,7 +41,7 @@ export const Article1 = ({ article, includes }) => {
             <div className={styles.readMore} onClick={handleReadMore}>
                 Read more
             </div>
-            {imageUrl && <img src={imageUrl} alt={article.fields.headline} />}
+            {imageUrl && <img src={imageUrl} alt={article.fields.headline} loading="lazy" />}
         </div>
     );
 };
